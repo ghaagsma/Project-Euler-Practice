@@ -4,6 +4,7 @@ CC := g++
 SRCDIR := src
 BUILDDIR := build
 TARGET := bin/main
+TESTTARGET := bin/tester
 
 SRCEXT := cpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
@@ -30,12 +31,12 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 
 clean:
 	@echo " Cleaning...";
-	@echo " $(RM) -r $(BUILDDIR) $(TARGET)"; $(RM) -r $(BUILDDIR) $(TARGET)
+	@echo " $(RM) -r $(BUILDDIR) $(TARGET) $(TESTTARGET)"; $(RM) -r $(BUILDDIR) $(TARGET) $(TESTTARGET)
 
 # Tests
 tester: $(TESTOBJECTS) $(CLASSOBJECTS)
 	@echo " Linking..."
-	@echo " $(CC) $^ -o bin/tester"; $(CC) $^ -o bin/tester
+	@echo " $(CC) $^ -o $(TESTTARGET)"; $(CC) $^ -o $(TESTTARGET)
 
 $(BUILDDIR)/%.o: $(TESTDIR)/%.$(SRCEXT)
 	@mkdir -p $(BUILDDIR)

@@ -1,6 +1,9 @@
 #ifndef PANDIGITALS_H
 #define PANDIGITALS_H
 
+#include <string>
+using std::string;
+
 class Pandigitals
 {
 public:
@@ -14,8 +17,8 @@ private:
 	// Tests
 	friend class Pandigitals_Tests;
 
-	static long long convert_to_base(long long value, int base);
-	static bool is_pandigital(long long value, int base);
+	static string convert_to_base(long long value, int base);
+	static bool is_pandigital(string value, int base);
 };
 
 #endif
