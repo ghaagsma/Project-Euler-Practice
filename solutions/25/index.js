@@ -2,6 +2,12 @@
     'use strict';
     let startTime = process.hrtime();
 
+    let isInteger = function (value) {
+        return !isNaN(value) &&
+            parseInt(Number(value)) == value &&
+            !isNaN(parseInt(value, 10));
+    };
+
     let trimLeadingZeros = function (str) {
         while (str.length && str[0] === '0') {
             str = str.slice(1);
@@ -83,27 +89,35 @@
         return result;
     };
 
-    let prev = '1',
-        curr = '1',
-        index = 2,
-        temp,
-        digits = 1000,
-        target = '1';
+    let getIndex = function (digits) {
+        let prev = '1',
+            curr = '1',
+            index = 2,
+            temp,
+            target = '1';
 
-    for (let i = 1; i < digits; ++i) {
-        target = target + '0';
-    }
+        for (let i = 1; i < digits; ++i) {
+            target = target + '0';
+        }
 
-    while (compareStrings(target, curr) > 0) {
-        temp = prev;
-        prev = curr;
-        curr = addStrings(temp, prev);
-        index++;
-    }
+        while (compareStrings(target, curr) > 0) {
+            temp = prev;
+            prev = curr;
+            curr = addStrings(temp, prev);
+            index++;
+        }
 
-    console.log('Index: ' + index);
+        return index;
+    };
+
+    // Read command line input
+    let input = parseInt(process.argv[2]);
+    const numDigits = isInteger(input) ? input : 1000;
     
+    console.log(`The index of the first term in the Fibonacci sequence to ` +
+        `contain ${numDigits} digits is ${getIndex(numDigits)}`);
+
     let endTime = process.hrtime(startTime),
-        duration = Math.round((endTime[0]*1000) + (endTime[1]/1000000));
+        duration = Math.round((endTime[0] * 1000) + (endTime[1] / 1000000));
     console.log(`Execution time: ${duration}ms`);
 })();
