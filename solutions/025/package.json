@@ -8,5 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gerald Haagsma",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghaagsma/project-euler-practice.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "performance-now": "^0.2.0"
+  }
 }
