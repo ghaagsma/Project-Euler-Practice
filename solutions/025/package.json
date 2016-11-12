@@ -14,6 +14,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "euler-common": "../common",
     "performance-now": "^0.2.0"
   },
   "devDependencies": {
