@@ -9,6 +9,8 @@
     };
 
     let compareStrings = function (str1, str2) {
+        str1 = trimLeadingZeros(str1);
+        str2 = trimLeadingZeros(str2);
         let l1 = str1.length,
             l2 = str2.length;
         if (l1 > l2) {

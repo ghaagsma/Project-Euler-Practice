@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    let stringUtilities = require('./string-utilities');
+    let stringUtilities = require('euler-common/src/string-utilities');
 
     let getIndexForDigits = function (digits) {
         let prev = '1',
