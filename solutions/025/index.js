@@ -2,7 +2,7 @@
     'use strict';
 
     let core = require('./core/core'),
-        inputParser = require('./core/input-parser'),
+        inputParser = require('../common/src/input-parser'),
         now = require('performance-now');
 
     let startTime = now();

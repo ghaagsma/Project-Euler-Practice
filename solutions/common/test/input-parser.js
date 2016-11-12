@@ -2,7 +2,7 @@
     'use strict';
 
     let chai = require('chai'),
-        inputParser = require('../core/input-parser');
+        inputParser = require('../src/input-parser');
 
     before(() => {
         chai.should();
