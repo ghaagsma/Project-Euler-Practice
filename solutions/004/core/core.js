@@ -4,10 +4,11 @@
     let stringUtilities = require('euler-common/src/string-utilities');
 
     let getLargestPalindromeProduct = (digits) => {
-        let limit = Math.pow(10, digits),
+        let upperLimit = Math.pow(10, digits),
+            lowerLimit = Math.pow(10, digits - 1),
             result = 0;
-        for (let i = limit - 1; i > 0; --i) {
-            for (let j = limit - 1; j > 0; --j) {
+        for (let i = upperLimit - 1; i >= lowerLimit; --i) {
+            for (let j = upperLimit - 1; j >= lowerLimit; --j) {
                 let product = i * j;
                 if (stringUtilities.isPalindrome(product.toString()) &&
                     product > result) {
