@@ -2,7 +2,7 @@
     'use strict';
 
     let isDivisible = (num, target) => {
-        for (let i = 2; i <= target; ++i) {
+        for (let i = target; i > 1; --i) {
             if (num % i !== 0)
                 return false;
         }
@@ -10,7 +10,7 @@
     };
 
     let getSmallestDivisibleValue = (target) => {
-        let result = 1;
+        let result = target;
         while (1) {
             if (isDivisible(result, target))
                 return result;
