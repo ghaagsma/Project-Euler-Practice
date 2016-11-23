@@ -1,14 +1,18 @@
 (() => {
     'use strict';
 
-    let findSum = function (limit) {
+    let findSumHelper = (multiple, limit) => {
         let result = 0;
-        for (let i = 3; i < limit; ++i) {
-            if (i % 3 === 0 || i % 5 === 0) {
-                result += i;
-            }
+        for (let i = multiple; i < limit; i += multiple) {
+            result += i;
         }
         return result;
+    }
+
+    let findSum = function (limit) {
+        return findSumHelper(3, limit) +
+            findSumHelper(5, limit) -
+            findSumHelper(15, limit);
     };
 
     module.exports = {
