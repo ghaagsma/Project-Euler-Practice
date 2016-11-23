@@ -2,14 +2,12 @@
     'use strict';
 
     let getFactors = function (num) {
-        if (num <= 0) {
+        if (num <= 0)
             throw 'Invalid input';
-        }
-        if (num === 2) {
-            return [1, 2];
-        }
+        if (num === 1)
+            return [1];
         let result = [];
-        for (let i = 1, lim = num; i <= lim; ++i) {
+        for (let i = 1, lim = num; i < lim; ++i) {
             let quotient = num / i;
             if (num % i === 0) {
                 result.push(i);

@@ -28,8 +28,36 @@
             result = factors.getFactors(2);
             areEqual(expected, result).should.equal(true);
 
+            expected = [1, 3];
+            result = factors.getFactors(3);
+            areEqual(expected, result).should.equal(true);
+
             expected = [1, 2, 4];
             result = factors.getFactors(4);
+            areEqual(expected, result).should.equal(true);
+
+            expected = [1, 5];
+            result = factors.getFactors(5);
+            areEqual(expected, result).should.equal(true);
+
+            expected = [1, 2, 3, 6];
+            result = factors.getFactors(6);
+            areEqual(expected, result).should.equal(true);
+
+            expected = [1, 7];
+            result = factors.getFactors(7);
+            areEqual(expected, result).should.equal(true);
+
+            expected = [1, 2, 4, 8];
+            result = factors.getFactors(8);
+            areEqual(expected, result).should.equal(true);
+
+            expected = [1, 3, 9];
+            result = factors.getFactors(9);
+            areEqual(expected, result).should.equal(true);
+
+            expected = [1, 2, 5, 10];
+            result = factors.getFactors(10);
             areEqual(expected, result).should.equal(true);
 
             expected = [1, 3, 5, 15];
