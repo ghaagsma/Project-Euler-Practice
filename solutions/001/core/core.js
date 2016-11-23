@@ -9,7 +9,7 @@
         return result;
     }
 
-    let findSum = function (limit) {
+    let findSum = (limit) => {
         return findSumHelper(3, limit) +
             findSumHelper(5, limit) -
             findSumHelper(15, limit);
