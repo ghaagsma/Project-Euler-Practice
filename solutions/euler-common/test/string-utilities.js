@@ -47,5 +47,21 @@
                 stringUtilities.add(a, b).should.equal('579');
             });
         });
+
+        describe('isPalindrome', () => {
+            it('should return false if input is not a palindrome', () => {
+                stringUtilities.isPalindrome('ab').should.equal(false);
+                stringUtilities.isPalindrome('abab').should.equal(false);
+                stringUtilities.isPalindrome('abcdefg').should.equal(false);
+                stringUtilities.isPalindrome('aaabbb').should.equal(false);
+            });
+
+            it('should return true if input is a palindrome', () => {
+                stringUtilities.isPalindrome('a').should.equal(true);
+                stringUtilities.isPalindrome('aba').should.equal(true);
+                stringUtilities.isPalindrome('abba').should.equal(true);
+                stringUtilities.isPalindrome('MadamImadaM').should.equal(true);
+            });
+        });
     });
 })();

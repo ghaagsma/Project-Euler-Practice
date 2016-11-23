@@ -1,14 +1,14 @@
 (() => {
     'use strict';
 
-    let trimLeadingZeros = function (str) {
+    let trimLeadingZeros = (str) => {
         while (str.length && str[0] === '0') {
             str = str.slice(1);
         }
         return str;
     };
 
-    let compareStrings = function (str1, str2) {
+    let compareStrings = (str1, str2) => {
         str1 = trimLeadingZeros(str1);
         str2 = trimLeadingZeros(str2);
         let l1 = str1.length,
@@ -30,7 +30,7 @@
         return 0;
     };
 
-    let addChars = function (c1, c2, c3) {
+    let addChars = (c1, c2, c3) => {
         c1 = c1 || '0';
         c2 = c2 || '0';
         c3 = c3 || '0';
@@ -47,7 +47,7 @@
         };
     };
 
-    let addStrings = function (str1, str2) {
+    let addStrings = (str1, str2) => {
         str1 = trimLeadingZeros(str1);
         str2 = trimLeadingZeros(str2);
 
@@ -84,8 +84,17 @@
         return result;
     };
 
+    let isPalindrome = (str) => {
+        for (var i = 0, j = str.length - 1; i < j; ++i, --j) {
+            if (str[i] !== str[j])
+                return false;
+        }
+        return true;
+    };
+
     module.exports = {
         compare: compareStrings,
-        add: addStrings
+        add: addStrings,
+        isPalindrome: isPalindrome
     };
 })();
