@@ -6,11 +6,13 @@
             return false;
         if (value === 2)
             return true;
-        for (let i = 2, lim = value; i <= lim; ++i) {
+        if (value % 2 === 0)
+            return false;
+        let limit = Math.floor(Math.sqrt(value));
+        for (let i = 3; i <= limit; i += 2) {
             if (value % i === 0) {
                 return false;
             }
-            lim = value / i;
         }
         return true;
     };
