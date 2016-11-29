@@ -1,7 +1,7 @@
 {
-  "name": "euler-001",
+  "name": "euler-007",
   "version": "0.0.1",
-  "description": "PROJECT EULER | PROBLEM 1",
+  "description": "PROJECT EULER | PROBLEM 7",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
