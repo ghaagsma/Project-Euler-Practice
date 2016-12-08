@@ -7,7 +7,7 @@
             result += i;
         }
         return result;
-    }
+    };
 
     let findSum = (limit) => {
         return findSumHelper(3, limit) +

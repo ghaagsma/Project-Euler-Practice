@@ -4,9 +4,10 @@
     let primes = require('euler-common/src/primes');
 
     let getSolution = (target) => {
-        let numPrimes = 0,
+        let numPrimes = 1, // 2 is prime
             i = 1;
         while (numPrimes < target) {
+            ++i;
             ++i;
             if (primes.isPrime(i))
                 ++numPrimes;

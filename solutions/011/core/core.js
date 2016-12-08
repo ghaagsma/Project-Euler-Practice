@@ -2,7 +2,7 @@
     'use strict';
 
     let getVerticalProduct = (grid, n, startRow, column) => {
-        let result = 1
+        let result = 1;
         for (let i = 0; i < n; ++i)
             result *= grid[startRow + i][column];
         return result;
