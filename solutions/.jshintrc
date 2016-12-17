@@ -1,5 +1,7 @@
 {
-  "predef": [],
+  "predef": [
+    "before"
+  ],
   "node": true,
   "browser": true,
   "esnext": true,
