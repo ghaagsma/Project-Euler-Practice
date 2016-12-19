@@ -3,23 +3,21 @@
 
     let getFactors = function (num) {
         if (num <= 0)
-            throw 'Invalid input';
+            throw new Error('Invalid input');
         if (num === 1)
             return [1];
-        let result = [];
-        for (let i = 1, lim = num; i < lim; ++i) {
+        let result = [],
+            limit = Math.floor(Math.sqrt(num));
+        for (let i = 1; i < limit; ++i) {
             let quotient = num / i;
             if (num % i === 0) {
                 result.push(i);
                 if (i !== quotient)
                     result.push(num / i);
             }
-            lim = Math.floor(quotient);
         }
         result.sort((a, b) => {
-            if (a < b) return -1;
-            if (b < a) return 1;
-            return 0;
+            return a - b;
         });
         return result;
     };
