@@ -3,8 +3,8 @@
 
     // let factors = require('euler-common/src/factors');
 
-    let getSolution = (input) => {
-        return input;
+    let getSolution = (target) => {
+        return target;
     };
 
     module.exports = {
