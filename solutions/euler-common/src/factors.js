@@ -8,7 +8,7 @@
             return [1];
         let result = [],
             limit = Math.floor(Math.sqrt(num));
-        for (let i = 1; i < limit; ++i) {
+        for (let i = 1; i <= limit; ++i) {
             let quotient = num / i;
             if (num % i === 0) {
                 result.push(i);
