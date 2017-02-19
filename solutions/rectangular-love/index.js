@@ -12,7 +12,7 @@
             result = [],
             n = defaultInput.length;
 
-        if (process.argv.length !== 10)
+        if (process.argv.length !== n + 2)
             return defaultInput;
 
         for (let i = 0; i < n; ++i) {
