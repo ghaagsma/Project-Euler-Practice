@@ -2,8 +2,7 @@
     'use strict';
 
     let makeChange = (amount, denominations) => {
-        let m = denominations.length,
-            results = [];
+        let results = [];
 
         results[0] = 1;
         for (let i = 1; i <= amount; ++i)
