@@ -34,31 +34,35 @@
     class LargestStack {
         constructor() {
             this._stack = new Stack();
+            this._maxStack = new Stack();
         }
 
         push(item) {
             if (typeof (item) !== 'number') {
                 throw new Error('Attempted to push item that was not a number.');
             }
-            let topItem = this._stack.peek();
-            this._stack.push({
-                value: item,
-                max: topItem === null ? item : Math.max(item, topItem.max)
-            });
+            let max = this._maxStack.peek();
+            if (!max || item >= max) {
+                this._maxStack.push(item);
+            }
+            this._stack.push(item);
         }
 
         pop() {
             if (!this._stack.items.length) {
                 throw new Error('Attempted to pop from empty stack.');
             }
-            return this._stack.pop().value;
+            if (this._stack.peek() === this._maxStack.peek()) {
+                this._maxStack.pop();
+            }
+            return this._stack.pop();
         }
 
         getMax() {
-            if (!this._stack.items.length) {
+            if (!this._maxStack.items.length) {
                 throw new Error('Attempted to get maximum value from empty stack.');
             }
-            return this._stack.peek().max;
+            return this._maxStack.peek();
         }
     }
 
