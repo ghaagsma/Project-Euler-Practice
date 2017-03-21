@@ -1,8 +1,8 @@
 (() => {
     'use strict';
 
-    let getLargestProfit = (prices) => {
-        let largestProfit = 0,
+    let getMaxProfit = (prices) => {
+        let maxProfit = 0,
             buyIndex = 0,
             sellIndex = 0,
             minPrice,
@@ -12,20 +12,20 @@
                 minPrice = price;
                 minIndex = index;
             }
-            if (price - minPrice > largestProfit) {
-                largestProfit = price - minPrice;
+            if (price - minPrice > maxProfit) {
+                maxProfit = price - minPrice;
                 buyIndex = minIndex;
                 sellIndex = index;
             }
         });
         return {
-            profit: largestProfit,
+            profit: maxProfit,
             buyIndex: buyIndex,
             sellIndex: sellIndex
         };
     };
 
     module.exports = {
-        getLargestProfit: getLargestProfit
+        getMaxProfit: getMaxProfit
     };
 })();

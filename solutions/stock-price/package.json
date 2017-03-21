@@ -1,7 +1,7 @@
 {
-  "name": "largest-profit",
+  "name": "stock-price",
   "version": "0.0.1",
-  "description": "Interview Cake - Largest Profit",
+  "description": "Interview Cake - Stock Price",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
