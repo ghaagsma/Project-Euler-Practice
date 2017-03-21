@@ -8,12 +8,8 @@
         let maxProfit = prices[1] - prices[0],
             minPrice = Math.min(prices[0], prices[1]);
         for (let i = 2; i < prices.length; ++i) {
-            if (prices[i] - minPrice > maxProfit) {
-                maxProfit = prices[i] - minPrice;
-            }
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            }
+            maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+            minPrice = Math.min(minPrice, prices[i]);
         }
         return maxProfit;
     };
