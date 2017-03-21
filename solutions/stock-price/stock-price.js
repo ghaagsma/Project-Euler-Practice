@@ -2,27 +2,20 @@
     'use strict';
 
     let getMaxProfit = (prices) => {
-        let maxProfit = 0,
-            buyIndex = 0,
-            sellIndex = 0,
-            minPrice,
-            minIndex;
-        prices.map((price, index) => {
-            if (index === 0 || price < minPrice) {
-                minPrice = price;
-                minIndex = index;
+        if (!prices || prices.length < 2) {
+            throw new Error('Expected array of length 2 or more.');
+        }
+        let maxProfit = prices[1] - prices[0],
+            minPrice = Math.min(prices[0], prices[1]);
+        for (let i = 2; i < prices.length; ++i) {
+            if (prices[i] - minPrice > maxProfit) {
+                maxProfit = prices[i] - minPrice;
             }
-            if (price - minPrice > maxProfit) {
-                maxProfit = price - minPrice;
-                buyIndex = minIndex;
-                sellIndex = index;
+            if (prices[i] < minPrice) {
+                minPrice = prices[i];
             }
-        });
-        return {
-            profit: maxProfit,
-            buyIndex: buyIndex,
-            sellIndex: sellIndex
-        };
+        }
+        return maxProfit;
     };
 
     module.exports = {
