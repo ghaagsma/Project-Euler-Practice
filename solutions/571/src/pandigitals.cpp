@@ -1,16 +1,16 @@
 #include "pandigitals.h"
 
-bool Pandigitals::is_super_pandigital(long long value, int base)
+bool Pandigitals::is_super_pandigital(int* value, int base)
 {
 	return false;
 }
 
-long long Pandigitals::convert_to_base(long long value, int base)
+string Pandigitals::convert_to_base(int* value, int base)
 {
-	return value;
+	return "value";
 }
 
-bool Pandigitals::is_pandigital(long long value, int base)
+bool Pandigitals::is_pandigital(int* value, int base)
 {
-	return true;
+	return false;
 }
