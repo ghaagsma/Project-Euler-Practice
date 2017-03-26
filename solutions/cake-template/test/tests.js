@@ -11,7 +11,7 @@
         expect = chai.expect;
     });
 
-    describe('second-largest-item-in-bst', () => {
+    describe('solution', () => {
         it('should throw an error if the input is invalid', () => {
             expect(() => {
                 solution.solve(null);
