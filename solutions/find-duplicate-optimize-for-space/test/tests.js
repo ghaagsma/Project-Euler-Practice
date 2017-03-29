@@ -50,6 +50,9 @@
 
             arr = [7, 1, 3, 4, 5, 6, 2, 6];
             solution.solve(arr).should.equal(6);
+
+            arr = [2, 2, 2, 4, 6, 6, 2, 6];
+            solution.solve(arr).should.equal(2);
         });
     });
 })();
