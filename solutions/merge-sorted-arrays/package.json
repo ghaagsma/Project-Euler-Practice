@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Interview Cake",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "test:debug": "mocha --debug-brk --reporter spec"
   },
   "author": "Gerald Haagsma",
   "repository": {
