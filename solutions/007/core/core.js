@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    let primes = require('euler-common/src/primes');
+    let primes = require('javascript-utilities/src/primes');
 
     let getSolution = (target) => {
         let numPrimes = 1, // 2 is prime

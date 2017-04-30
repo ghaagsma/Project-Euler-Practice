@@ -2,7 +2,7 @@
     'use strict';
 
     let now = require('performance-now'),
-        inputParser = require('euler-common/src/input-parser'),
+        inputParser = require('javascript-utilities/src/input-parser'),
         primeFactors = require('./core/prime-factors');
 
     let startTime = now();

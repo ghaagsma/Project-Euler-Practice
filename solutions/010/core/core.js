@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    let primes = require('euler-common/src/primes');
+    let primes = require('javascript-utilities/src/primes');
 
     let getSumOfPrimes = (limit) => {
         let result = 2;

@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    let stringUtilities = require('euler-common/src/string-utilities');
+    let stringUtilities = require('javascript-utilities/src/string-utilities');
 
     let getSolution = (data, target) => {
         let result = '0';

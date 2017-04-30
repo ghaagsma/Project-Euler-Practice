@@ -1,8 +1,8 @@
 (() => {
     'use strict';
 
-    let factors = require('euler-common/src/factors'),
-        primes = require('euler-common/src/primes');
+    let factors = require('javascript-utilities/src/factors'),
+        primes = require('javascript-utilities/src/primes');
 
     let getLargestPrimeFactor = function (num) {
         let allFactors = factors.getFactors(num);

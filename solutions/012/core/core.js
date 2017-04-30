@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    let factors = require('euler-common/src/factors');
+    let factors = require('javascript-utilities/src/factors');
 
     let getSolution = (target) => {
         let i = 1,

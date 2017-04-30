@@ -2,7 +2,7 @@
     'use strict';
 
     let core = require('./core/core'),
-        inputParser = require('euler-common/src/input-parser'),
+        inputParser = require('javascript-utilities/src/input-parser'),
         now = require('performance-now');
 
     let startTime = now();
