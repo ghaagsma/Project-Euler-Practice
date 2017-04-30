@@ -1,7 +1,7 @@
 {
-  "name": "euler-001",
+  "name": "euler-081",
   "version": "0.0.1",
-  "description": "PROJECT EULER | PROBLEM 1",
+  "description": "PROJECT EULER | PROBLEM 81",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -18,7 +18,7 @@
     "mocha": "^3.1.2"
   },
   "dependencies": {
-    "euler-common": "../euler-common",
+    "javascript-utilities": "../../../javascript-utilities",
     "performance-now": "^0.2.0"
   }
 }
