@@ -23,7 +23,8 @@
             for (let row = 0; row < numRows; ++row) {
                 // Initialize value by calculating value of moving from element
                 // directly to the left
-                minimalPathSums[row][column] = minimalPathSums[row][column - 1] +
+                minimalPathSums[row][column] =
+                    minimalPathSums[row][column - 1] +
                     matrix[row][column];
             }
 
